@@ -1,1 +1,102 @@
-<!DOCTYPE html><html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Perfume Masculino - Cosméticos Shopping</title><link rel="stylesheet" href="style.css"></head><body><header><h1><a href="index.html">Cosméticos Shopping</a></h1></header><main><div class="product-image"><img src="download (1).jpeg" alt="Perfume Masculino"></div><div class="product-details"><h2>Perfume Essencial Masculino</h2><p>Uma fragrância elegante e sofisticada, com notas amadeiradas e toques de especiarias. Ideal para homens que buscam marcar presença com um aroma único e duradouro.</p><p class="price">R$ 250,00</p><button class="buy-btn">Comprar</button></div></main><footer><p>&copy; 2025 Cosméticos Shopping</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Perfume - Minha Loja</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .menu-items {
+      display: flex;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        display: none;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      nav.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+      }
+
+      .menu-items {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Minha Loja</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="menu" class="menu-items">
+      <a href="index.html">Início</a>
+      <a href="produto-batom.html">Batom</a>
+      <a href="produto-perfume.html">Perfume</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main style="padding: 20px;">
+    <h1>Perfume</h1>
+    <p>Confira nossa seleção de perfumes elegantes!</p>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>
+
